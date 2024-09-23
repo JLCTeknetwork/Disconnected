@@ -19,13 +19,10 @@
             background-repeat: no-repeat;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0);
-            padding: 2%;
             max-width: 90%;
             width: 1000px; /* Adjusted width */
             text-align: center;
-            box-sizing: border-box;
-			margin-top:-35px;
+            margin-top: -100px; /* Reduced margin */
         }
         h1 {
             color: #ff0800;
@@ -43,23 +40,20 @@
             max-width: 100%; /* Ensure images do not exceed container width */
             height: auto; /* Maintain aspect ratio */
         }
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
+        /* Media query for devices below 500px */
+        @media (max-width: 300px) {
+            .container {
+                margin-top: -280px; /* Bring the container closer to the top */
+                max-width: 95%;
+            }
+            h1 {
+                font-size: 8vw; /* Slightly smaller font for smaller screens */
+            }
+            p {
+                font-size: 5vw; /* Larger font for readability */
+            }
         }
-        .payment-item {
-            text-align: center;
-            max-width: 120px;
-            margin: 5px;
-        }
-        .payment-item img {
-            width: 100%;
-            max-width: 80px;
-            max-height: 80px;
-        }
+
         @media (min-width: 768px) {
             h1 {
                 font-size: 4vw;
@@ -67,10 +61,8 @@
             p {
                 font-size: 2.5vw;
             }
-            .payment-item {
-                max-width: 150px;
-            }
         }
+
         @media (min-width: 1200px) {
             h1 {
                 font-size: 3vw;
@@ -78,35 +70,15 @@
             p {
                 font-size: 1.5vw;
             }
-            .payment-item {
-                max-width: 200px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-       
-        <img src="alert.png">
-		 <h1 style="margin-top:-10px">DISCONNECTED!</h1>
-        <!---p>
-            Your INTERNET is currently DISCONNECTED due to unpaid balance. Settle your account remain active  
-            <br>
-            
-        </p>
-        <p>Mode of Payment</p>
-        <div class="payment-methods">
-            <div>
-                
-                   <img src="QR.png">
-                    <p>09939400552 <br> JE****I M.</p>
-               
-            </div>
-        </div---><p>This Account Has Been Temporarily Suspended Due To Non Payment
-
-		</p>
-       <p>Contact Our Team <a href="https://www.facebook.com/everstreaminternetservices" target="_blank">Click here</a></p>
-        
+        <img src="alert.png" alt="Alert">
+        <h1>DISCONNECTED!</h1>
+        <p>This Account Has Been Temporarily Suspended Due To Non Payment</p>
+        <p>Contact Our Team <a href="https://www.facebook.com/everstreaminternetservices" target="_blank" style="color: #ff0800; text-decoration: underline;">Click here</a></p>
     </div>
 </body>
 </html>
